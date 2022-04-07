@@ -11,14 +11,7 @@ let counter = 0;
 
 
 function run() {
-document.getElementById("paragraph" ).innerHTML = "HelloWorld!";
-document.getElementById("paragraph").style.backgroundColor = "green";
-document.getElementById("paragraph").style.color = "#ffffff";
-document.getElementById("paragraph") .style.padding = "20px";
-
-randomNum () ;
-userNumber () ;
-compareNumbers();
+    compare()
 }
 
 function randomNum() {
@@ -31,57 +24,28 @@ function userNumber() {
     return user;
 }
 
-function compareNumbers () {
-let a = userNumber();
-let b = randomNum(0);
-let z = document.getELementById ("compare");
-let c = document.getElementById ("counter");
+function compare(){
+    a = randomNum()
+    b = userNumber()
 
-    function compareNumbers() {
-        let a = userNumber();
-        let b = randomNum();
-        let z = document.getElementById("compare");
-        let C = document.getElementById ("counter");
-        
-        if ( a!= b) {
-        z.innerHTML = "Numbers are not the same. Computer got " + b + ", and user got " + a;
-        z.style.color = "white";
-        z.style.backgroundColor = "#ff000o";
-        z.style.padding = "20px";
-        z.style.textAlign = "center";
+
+    if ( a!= b) {
+        document.getElementById("compare").innerHTML = `The numbers are not the same. Computer guessed ${a} and you guessed ${b}`
+        document.getElementById("compare").style.backgroundColor = "rgb(225, 17, 17)";
         counter++;
-        c.innerHTML = "You have tried " + counter + " times."
-        c.style.color = "white";
-        c.style.backgroundColor = "#312f2f";
-        c.style.padding = "20px";
-        c.style.textAlign = "center";
-        document.querySelector("body").style.backgroundColor = "#ff9c9c";
+        document.getElementById("counter").innerHTML = `You have tried ${counter}`
 
-        } else if ( a == b) {
-        z.innerHTML = "Numbers are the same. Computer got " + b + ", and user got " + a;
-        z.style.color = "white";
-        z.style.backgroundColor = "#00ff00";
-        z.style.padding = "20px";
-        z.style.textAlign = "center";
-        c.innerHTML = "You have tried " + counter + " times to get it right."
-        c.style.color = "white";
-        c.style.backgroundColor = "#312f2F";
-        c.style.padding = "20px";
-        c.style.textAlign = "center";
+    } else if(a == b){
+        document.getElementById("compare").innerHTML = `The numbers are the same. Computer guessed ${a} and you guessed ${b}`
+        document.getElementById("compare").style.backgroundColor = "green";
+        document.getElementById("counter").innerHTML = `You have tried ${counter} to get it right`
         counter = 0;
-
-        }
-
-        resetInput();
-
     }
+
+    resetInput();
+
+}    
 
 function resetInput() {
     document.getElementById("getNumber").value = "";
-}
-
-
-
-
-
 }

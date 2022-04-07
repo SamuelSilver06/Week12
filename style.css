@@ -1,17 +1,57 @@
+body {
+    background-color: rgb(61, 61, 61);
+}
+
 #getNumber {
     font-size: 22px;
     text-align: center;
+    border-radius: 5px;
 }
 
 .inputNumberBox {
     display: flex;
     justify-content: center;
+    border-radius: 5px;
 }
 
 #paragraph {
     margin-left: 20px;
-    background-color: darkblue;
+    background-color: white;
+    color: rgb(61, 61, 61);
+    font-size: 20px;
+    padding: 30px;
+    border-radius: 5px;
 }
 
+.header {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-right: 550px;
+    margin-left: 550px;
+    text-align: center;
+    border-radius: 5px;
+}
 
+.instructions {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin-right: 380px;
+    margin-left: 380px;
+    text-align: center;
+    border-radius: 5px;
+}
 
+#counter{
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+#compare{
+    text-align: center;
+    margin-left: 225px;
+    margin-right: 225px;
+    border-radius: 5px;
+}
